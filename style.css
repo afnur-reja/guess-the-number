@@ -1,0 +1,87 @@
+/* Basic styles for the body and overall layout */
+body {
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh; /* Ensures the content is vertically centered on the page */
+    margin: 0;
+    background-color: #f4f4f4; /* Light gray background */
+    color: #333;
+    padding: 20px;
+    box-sizing: border-box; /* Includes padding in the element's total width and height */
+}
+
+/* Styling for the main paragraph instructing the user */
+p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Input field styling */
+#guess {
+    padding: 10px;
+    font-size: 1.1em;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    width: 200px;
+    max-width: 90%; /* Ensures it doesn't overflow on smaller screens */
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+/* Focus style for the input field */
+#guess:focus {
+    border-color: #007bff; /* Blue border on focus */
+    outline: none; /* Removes the default outline */
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Soft blue shadow on focus */
+}
+
+/* Button styling */
+button {
+    padding: 10px 20px;
+    font-size: 1em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Smooth transition for background color */
+    margin: 5px; /* Space between buttons */
+}
+
+/* Specific style for the submit button */
+.submit-btn {
+    background-color: #28a745; /* Green */
+    color: white;
+}
+
+.submit-btn:hover {
+    background-color: #218838; /* Darker green on hover */
+}
+
+/* Specific style for the start game button */
+.start-btn {
+    background-color: #007bff; /* Blue */
+    color: white;
+}
+
+.start-btn:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+/* Styling for the message paragraph (e.g., "you got it! congrats") */
+.massage { /* Note: This is spelled 'massage' in your HTML. You might want to correct it to 'message' */
+    font-size: 1.4em;
+    font-weight: bold;
+    color: #28a745; /* Green for success message */
+    margin-top: 20px;
+    display: none; /* Initially hidden, will be shown by JavaScript */
+}
+
+/* Styling for the user guesses paragraph */
+.user-guesses {
+    font-size: 1em;
+    color: #555;
+    margin-top: 10px;
+}
