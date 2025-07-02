@@ -4,6 +4,14 @@ const startBtn = document.querySelector(".start-btn")
 const massage = document.querySelector(".massage")
 const userGuesses = document.querySelector(".user-guesses")
 
-const theNumber = Math.floor(Math.random() * 101) + 1
+const theGuess = Math.floor(Math.random() * 100) + 1
 
-console.log(theNumber)
+const onStartGame = () => {
+    startBtn.disabled = true;
+
+}
+
+onStartGame()
+
+console.log(theGuess)
+
