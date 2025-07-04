@@ -1,87 +1,118 @@
-/* Basic styles for the body and overall layout */
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(to right, #4facfe, #00f2fe);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 1rem;
+    color: #333;
+}
+
+/* Form Container */
+form {
+    background-color: #ffffffcc;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    min-height: 100vh; /* Ensures the content is vertically centered on the page */
-    margin: 0;
-    background-color: #f4f4f4; /* Light gray background */
-    color: #333;
-    padding: 20px;
-    box-sizing: border-box; /* Includes padding in the element's total width and height */
+    gap: 1rem;
+    width: 100%;
+    max-width: 400px;
 }
 
-/* Styling for the main paragraph instructing the user */
-p {
-    font-size: 1.2em;
-    margin-bottom: 20px;
+/* Paragraph in form */
+form p {
+    font-size: 1.2rem;
     text-align: center;
 }
 
-/* Input field styling */
-#guess {
-    padding: 10px;
-    font-size: 1.1em;
+/* Input Styling */
+input#guess {
+    padding: 0.6rem;
+    width: 100%;
+    max-width: 250px;
     border: 2px solid #ccc;
-    border-radius: 5px;
-    width: 200px;
-    max-width: 90%; /* Ensures it doesn't overflow on smaller screens */
-    margin-bottom: 15px;
-    text-align: center;
+    border-radius: 6px;
+    font-size: 1rem;
 }
 
-/* Focus style for the input field */
-#guess:focus {
-    border-color: #007bff; /* Blue border on focus */
-    outline: none; /* Removes the default outline */
-    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Soft blue shadow on focus */
-}
-
-/* Button styling */
+/* Buttons Styling */
 button {
-    padding: 10px 20px;
-    font-size: 1em;
+    padding: 0.6rem 1.2rem;
     border: none;
-    border-radius: 5px;
+    border-radius: 6px;
     cursor: pointer;
-    transition: background-color 0.3s ease; /* Smooth transition for background color */
-    margin: 5px; /* Space between buttons */
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+    width: 100%;
+    max-width: 250px;
 }
 
-/* Specific style for the submit button */
 .submit-btn {
-    background-color: #28a745; /* Green */
+    background-color: #28a745;
     color: white;
 }
 
 .submit-btn:hover {
-    background-color: #218838; /* Darker green on hover */
+    background-color: #218838;
 }
 
-/* Specific style for the start game button */
 .start-btn {
-    background-color: #007bff; /* Blue */
+    background-color: #007bff;
     color: white;
 }
 
 .start-btn:hover {
-    background-color: #0056b3; /* Darker blue on hover */
+    background-color: #0069d9;
 }
 
-/* Styling for the message paragraph (e.g., "you got it! congrats") */
-.massage { /* Note: This is spelled 'massage' in your HTML. You might want to correct it to 'message' */
-    font-size: 1.4em;
-    font-weight: bold;
-    color: #28a745; /* Green for success message */
-    margin-top: 20px;
-    /* display: none;  */
+/* Message and Guess Display */
+.massage, .user-guesses {
+    margin-top: 1rem;
+    font-size: 1.1rem;
+    background-color: #fff;
+    padding: 0.6rem 1rem;
+    border-radius: 8px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+    visibility: hidden;
+   
 }
 
-/* Styling for the user guesses paragraph */
-.user-guesses {
-    font-size: 1em;
-    color: #555;
-    margin-top: 10px;
+.btn:disabled {
+    cursor: not-allowed;
+}
+
+/* Responsive Styling for Small Screens */
+@media (max-width: 480px) {
+    form {
+        padding: 1.5rem 1rem;
+    }
+
+    input#guess, button {
+        max-width: 100%;
+    }
+
+    .massage, .user-guesses {
+        font-size: 1rem;
+        padding: 0.5rem;
+    }
+
+    form p {
+        font-size: 1rem;
+    }
 }

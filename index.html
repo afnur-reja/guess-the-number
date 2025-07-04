@@ -7,12 +7,14 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <p>Enter a guess between 0 to 100</p>
-    <input type="number" name="" id="guess" placeholder="Enter a number" autocomplete="off" min="0" max="100" required autofocus>
-    <button class="submit-btn">Submit</button>
-    <button class="start-btn">Start Game</button>
-    <p class="massage">you got it! congrats</p>
-    <p class="user-guesses">your guesses : 12, 34</p>
+    <form action="">
+        <p>Enter a guess between 0 to 100</p>
+        <input type="number" name="" id="guess" placeholder="Enter a number" autocomplete="off" min="0" max="100" required autofocus>
+        <button class="submit-btn btn">Submit</button>
+        <button type="button" class="start-btn btn" disabled>Start Game</button>
+    </form>
+    <p class="massage"></p>
+    <p class="user-guesses"></p>
     <script src="script.js"></script>
 </body>
 </html>
