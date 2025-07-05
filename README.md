@@ -35,7 +35,7 @@ A simple, fun web-based game where you try to guess a randomly generated number 
 
 1. Clone the repo:
    ```bash
-   git clone https://github.com/your-username/guess-the-number.git
+   git clone https://github.com/afnur-reja/guess-the-number.git
    ```
 
 2. Open `index.html` in your browser:
