@@ -1,0 +1,118 @@
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(to right, #4facfe, #00f2fe);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 1rem;
+    color: #333;
+}
+
+/* Form Container */
+form {
+    background-color: #ffffffcc;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+    max-width: 400px;
+}
+
+/* Paragraph in form */
+form p {
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+/* Input Styling */
+input#guess {
+    padding: 0.6rem;
+    width: 100%;
+    max-width: 250px;
+    border: 2px solid #ccc;
+    border-radius: 6px;
+    font-size: 1rem;
+}
+
+/* Buttons Styling */
+button {
+    padding: 0.6rem 1.2rem;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+    width: 100%;
+    max-width: 250px;
+}
+
+.submit-btn {
+    background-color: #28a745;
+    color: white;
+}
+
+.submit-btn:hover {
+    background-color: #218838;
+}
+
+.start-btn {
+    background-color: #007bff;
+    color: white;
+}
+
+.start-btn:hover {
+    background-color: #0069d9;
+}
+
+/* Message and Guess Display */
+.massage, .user-guesses {
+    margin-top: 1rem;
+    font-size: 1.1rem;
+    background-color: #fff;
+    padding: 0.6rem 1rem;
+    border-radius: 8px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+    visibility: hidden;
+   
+}
+
+.btn:disabled {
+    cursor: not-allowed;
+}
+
+/* Responsive Styling for Small Screens */
+@media (max-width: 480px) {
+    form {
+        padding: 1.5rem 1rem;
+    }
+
+    input#guess, button {
+        max-width: 100%;
+    }
+
+    .massage, .user-guesses {
+        font-size: 1rem;
+        padding: 0.5rem;
+    }
+
+    form p {
+        font-size: 1rem;
+    }
+}
