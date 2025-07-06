@@ -18,6 +18,7 @@ form.addEventListener('submit',(e) => {
     if (isNaN(userGuess) || userGuess < 0 || userGuess > 100) {
         massage.style.visibility = "visible";
         massage.innerText = "Please enter a number between 0 and 100!";
+        form.reset()
         return;
     }
 
@@ -31,6 +32,7 @@ form.addEventListener('submit',(e) => {
         userGuesses.innerText = `Your guesses: ${guessArr.join(", ")}`;
         submitBtn.disabled = true;
         startBtn.disabled = false;
+        form.reset()
         return;
     }
 
